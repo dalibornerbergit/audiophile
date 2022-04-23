@@ -1,0 +1,31 @@
+.speakers-header {
+  background: #000;
+}
+
+.speakers-page-content {
+  padding: 5rem;
+}
+
+.speaker-details-item {
+  margin-bottom: 5rem;
+}
+
+.speaker-details-item-img {
+  border-radius: 8px;
+}
+
+.speaker-details-item-img img {
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.speaker-details-item-text {
+  margin: auto 0;
+}
+
+.rs-input-group:not(.rs-input-group-inside)
+  .rs-input-number:not(:last-child)
+  .rs-input-number-btn-group-vertical {
+  display: none;
+}

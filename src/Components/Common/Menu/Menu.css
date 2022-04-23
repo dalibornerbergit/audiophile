@@ -1,0 +1,17 @@
+.ns-menu {
+  margin-bottom: 5rem;
+}
+
+.ns-menu-item {
+  margin-bottom: 1rem;
+  background: #f1f1f1;
+  text-align: center;
+  border-radius: 4px;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.ns-menu-item img {
+  max-width: 125px;
+  max-height: 160px;
+}

@@ -1,0 +1,14 @@
+.some-guy {
+  margin-top: 5rem;
+}
+
+.some-guy-text {
+  margin: auto 0;
+  border-radius: 8px;
+}
+
+.some-guy-img {
+  background-image: url("./image-best-gear.jpg");
+  height: 588px;
+  border-radius: 8px;
+}

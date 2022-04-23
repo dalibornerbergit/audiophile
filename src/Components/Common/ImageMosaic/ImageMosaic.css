@@ -1,0 +1,13 @@
+.ns-img-mosaic {
+  margin-bottom: 5rem;
+}
+
+.ns-img-mosail-img {
+  padding-bottom: 1rem;
+}
+
+.ns-img-mosail-img img {
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 100%;
+}

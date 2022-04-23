@@ -1,0 +1,27 @@
+.home-page {
+  background: #fff;
+}
+
+.home-page-content {
+  padding: 5rem;
+}
+
+.headphones-div {
+  background-image: url("./image-hero.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 729px;
+  color: #fff;
+}
+
+.ad-section {
+  height: calc(100% - 97px);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.ad-container {
+  margin-left: 5rem;
+  max-width: 400px;
+}

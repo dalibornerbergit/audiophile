@@ -1,0 +1,18 @@
+.featured-product {
+  margin-bottom: 5rem;
+}
+
+.featured-product-img {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.featured-product-img img {
+  height: 350px;
+  width: 300;
+}
+
+.featured-product-text {
+  padding: 5rem;
+  margin: auto 0;
+}

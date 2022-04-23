@@ -1,14 +1,11 @@
-import GlobalContextProvider from "../../Contexts/GlobalContext";
-import Header from "./Header";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 
 const Layout = (props) => {
   return (
-    <GlobalContextProvider>
-      <Header />
+    <>
       {props.children}
       <Footer />
-    </GlobalContextProvider>
+    </>
   );
 };
 

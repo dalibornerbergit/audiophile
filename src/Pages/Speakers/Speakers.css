@@ -1,0 +1,13 @@
+.speakers-header {
+  background: #000;
+}
+
+.speakers-header-title {
+  color: #fff;
+  text-align: center;
+  padding: 4rem;
+}
+
+.speakers-page-content {
+  padding: 5rem;
+}

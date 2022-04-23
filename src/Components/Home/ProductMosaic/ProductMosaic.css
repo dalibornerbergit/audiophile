@@ -1,0 +1,51 @@
+.ns-mosaic-item {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+#zx9 {
+  background: #d87d4a;
+  color: #fff;
+}
+
+#zx9 img {
+  max-width: 500px;
+  max-height: 410px;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+
+#zx9 .speaker-info {
+  padding: 5rem;
+  margin: auto 0;
+}
+
+#zx7 {
+  background-image: url("./image-speaker-zx7.jpg");
+  background-size: cover;
+}
+
+#zx7 img {
+  max-width: 500px;
+  max-height: 410px;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+
+#zx7 .speaker-info {
+  padding: 5rem;
+  margin: auto 0;
+}
+
+#yx1 {
+  background: #f1f1f1;
+  padding: 5rem 3rem;
+  margin: auto 0;
+  height: 320px;
+}
+
+#yx1-img {
+  background-image: url("./image-earphones-yx1.jpg");
+  background-size: cover;
+  height: 320px;
+}

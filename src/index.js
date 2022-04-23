@@ -4,13 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-//Import Bootstrap CSS and JS
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
-
-//Import Custom CSS
-import "./Resources/Styles/Dashboard.css";
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

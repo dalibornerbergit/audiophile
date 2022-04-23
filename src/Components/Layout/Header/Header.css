@@ -1,0 +1,21 @@
+.ns-navbar.rs-navbar-default {
+  display: flex;
+  align-items: center;
+  /* min-height: 97px;
+  max-height: 97px; */
+  margin: 0 5rem;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid #979797;
+}
+
+.ns-navbar.rs-navbar-default .ns-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ns-navbar.rs-navbar-default .ns-navbar-brand {
+  font-size: 25px;
+}
