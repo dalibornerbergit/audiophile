@@ -25,7 +25,7 @@ const CartContextProvider = (props) => {
 
     selectedItems.map((item) => (sum = Number(item.price) + sum));
 
-    setPrice(sum * 1.2);
+    setPrice((sum * 1.2).toFixed(1));
 
     saveToLocalStorage("selectedItems", selectedItems);
   }, [selectedItems]);

@@ -25,6 +25,16 @@ code {
   padding: 5rem;
 }
 
+.dark-header {
+  background: #000;
+}
+
+.dark-header-title {
+  color: #fff;
+  text-align: center;
+  padding: 4rem;
+}
+
 .ns-shop .rs-btn.rs-btn-default {
   border-radius: 0;
   background: #d87d4a;

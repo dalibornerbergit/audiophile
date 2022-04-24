@@ -6,33 +6,34 @@ import Header from "../../Components/Layout/Header/Header";
 
 import data from "../../data.json";
 
-import "./Speakers.css";
-
-const Speakers = () => {
+const Headphones = () => {
   return (
     <>
       <div className="dark-header">
         <Header />
 
         <div className="dark-header-title">
-          <h2>SPEAKERS</h2>
+          <h2>HEADPHONES</h2>
         </div>
       </div>
 
       <div className="container">
         <NewProduct
-          img={`/assets/product-${data[5].slug}/desktop/image-product.jpg`}
-          title={data[5].name.toUpperCase()}
-          description={data[5].description}
-          link="/headphones/5"
+          img={`/assets/product-${data[1].slug}/desktop/image-product.jpg`}
+          title={data[1].name.toUpperCase()}
+          description={data[1].description}
+          link="/headphones/1"
         />
 
-        <FeaturedProduct
-          img={`/assets/product-${data[4].slug}/desktop/image-product.jpg`}
-          title={data[4].name.toUpperCase()}
-          description={data[4].description}
-          link="/headphones/4"
-        />
+        {data.slice(2, 4).map((item, i) => (
+          <FeaturedProduct
+            key={i}
+            img={`/assets/product-${item.slug}/desktop/image-product.jpg`}
+            title={item.name.toUpperCase()}
+            description={item.description}
+            link={`/headphones/${i + 2}`}
+          />
+        ))}
 
         <Menu />
 
@@ -42,4 +43,4 @@ const Speakers = () => {
   );
 };
 
-export default Speakers;
+export default Headphones;

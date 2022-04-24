@@ -11,6 +11,9 @@ import Cart from "./Pages/Cart/Cart";
 import Checkout from "./Pages/Checkout/Checkout";
 
 import "rsuite/dist/rsuite.min.css";
+import EarphoneDetails from "./Pages/EarphoneDetails/EarphoneDetails";
+import HeadphonesDetails from "./Pages/HeadphonesDetails/HeadphonesDetails";
+import Headphones from "./Pages/Headphones/Headphones";
 
 function App() {
   return (
@@ -36,6 +39,24 @@ function App() {
               path="/earphones"
               layout={Layout}
               component={Earphones}
+            />
+            <PublicRoute
+              exact
+              path="/earphones/:id"
+              layout={Layout}
+              component={EarphoneDetails}
+            />
+            <PublicRoute
+              exact
+              path="/headphones"
+              layout={Layout}
+              component={Headphones}
+            />
+            <PublicRoute
+              exact
+              path="/headphones/:id"
+              layout={Layout}
+              component={HeadphonesDetails}
             />
             <PublicRoute exact path="/cart" layout={Layout} component={Cart} />
             <PublicRoute

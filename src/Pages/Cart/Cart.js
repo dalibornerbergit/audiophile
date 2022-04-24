@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { List, Button } from "rsuite";
 import { CartContext } from "../../Contexts/CartContext";
+import GoBack from "../../Components/Common/GoBack/GoBack";
 import Header from "../../Components/Layout/Header/Header";
 
 import "./Cart.css";
@@ -20,27 +21,44 @@ const Cart = () => {
     setSelectedItems([...match, ...noMatch]);
   };
 
+  console.log(selectedItems);
+
   return (
     <>
-      <div className="speakers-header">
+      <div className="dark-header">
         <Header />
       </div>
 
-      <div className="cart-page">
-        {selectedItems.length === 0 && <h4>No items selected.</h4>}
+      <div className="container cart-page">
+        <GoBack />
 
-        <List style={{ marginBottom: "2rem" }}>
+        {selectedItems.length === 0 && <h4>No items selected</h4>}
+
+        <List style={{ marginBottom: "2rem", width: "fit-content" }}>
           {selectedItems.map((item, i) => (
-            <List.Item style={{ textAlign: "center" }} key={i} index={i}>
+            <List.Item className="cart-list" key={i} index={i}>
+              <img
+                style={{
+                  maxWidth: "100px",
+                  maxHeight: "100px",
+                  marginRight: "2rem",
+                  borderRadius: "4px",
+                }}
+                src={`/assets/product-${item.slug}/desktop/image-product.jpg`}
+                alt=""
+              />
               Category: <b>{item.category}</b> | Name: <b>{item.name}</b> |
               Price: <b>{item.price}</b>{" "}
-              <Button
-                onClick={() => handleRemove(item)}
-                size="sm"
-                appearance="primary"
-              >
-                Remove
-              </Button>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <Button
+                  className="remove-btn"
+                  onClick={() => handleRemove(item)}
+                  size="sm"
+                  appearance="primary"
+                >
+                  Remove
+                </Button>
+              </div>
             </List.Item>
           ))}
         </List>

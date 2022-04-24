@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Menu from "../../Components/Common/Menu/Menu";
 import SomeGuy from "../../Components/Common/SomeGuy/SomeGuy";
 import Header from "../../Components/Layout/Header/Header";
@@ -10,10 +10,10 @@ import ItemDetails from "../../Components/Common/ItemDetails/ItemDetails";
 
 import data from "../../data.json";
 
-import "./SpeakerDetails.css";
-
-const SpeakerDetails = () => {
+const HeadphonesDetails = () => {
   const params = useParams();
+
+  console.log(data);
 
   return (
     <>
@@ -40,4 +40,4 @@ const SpeakerDetails = () => {
   );
 };
 
-export default SpeakerDetails;
+export default HeadphonesDetails;

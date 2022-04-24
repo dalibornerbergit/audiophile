@@ -22,7 +22,7 @@ const Header = () => {
         {!isMobile && (
           <div>
             <Nav.Item onClick={() => history.push("/")}>HOME</Nav.Item>
-            <Nav.Item onClick={() => history.push("/speakers")}>
+            <Nav.Item onClick={() => history.push("/headphones")}>
               HEADPHONES
             </Nav.Item>
             <Nav.Item onClick={() => history.push("/speakers")}>

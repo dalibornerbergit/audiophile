@@ -3,6 +3,8 @@ import NewProduct from "../../Components/Common/NewProduct/NewProduct";
 import SomeGuy from "../../Components/Common/SomeGuy/SomeGuy";
 import Header from "../../Components/Layout/Header/Header";
 
+import data from "../../data.json";
+
 import "./Earphones.css";
 
 const Earphones = () => {
@@ -18,10 +20,10 @@ const Earphones = () => {
 
       <div className="container">
         <NewProduct
-          img="/assets/product-yx1-earphones/desktop/image-product.jpg"
-          title="ZX9 SPEAKER"
-          description="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
-          link="/"
+          img={`/assets/product-${data[0].slug}/desktop/image-product.jpg`}
+          title={data[0].name.toUpperCase()}
+          description={data[0].description}
+          link="/earphones/0"
         />
 
         <Menu />

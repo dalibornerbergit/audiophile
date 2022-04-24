@@ -26,13 +26,13 @@ const YouMayAlsoLike = () => {
             </div>
 
             <div className="ns-ymal-item-text">
-              <h4 style={{ marginBottom: "1rem" }}>
+              <h5 style={{ marginBottom: "1rem" }}>
                 {item.name.toUpperCase()}
-              </h4>
+              </h5>
 
               <Button
                 style={{ marginBottom: "1rem" }}
-                onClick={() => history.push(`/speakers/4`)}
+                onClick={() => history.push(`/${data[i].category}/${i}`)}
               >
                 SEE PRODUCT
               </Button>
