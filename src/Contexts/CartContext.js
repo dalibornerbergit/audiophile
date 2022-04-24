@@ -17,15 +17,15 @@ const CartContextProvider = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log("selectedItems: ", selectedItems);
-
     setTotal(selectedItems?.length);
 
     let sum = 0;
 
+    selectedItems.sort((a, b) => (a.price > b.price ? 1 : -1));
+
     selectedItems.map((item) => (sum = Number(item.price) + sum));
 
-    setPrice(sum);
+    setPrice(sum * 1.2);
 
     saveToLocalStorage("selectedItems", selectedItems);
   }, [selectedItems]);

@@ -3,7 +3,7 @@ import Footer from "./Footer/Footer";
 const Layout = (props) => {
   return (
     <>
-      {props.children}
+      <div className="ns-shop">{props.children}</div>
       <Footer />
     </>
   );

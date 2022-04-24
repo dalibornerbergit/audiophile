@@ -1,18 +1,23 @@
+import { useContext } from "react";
 import { FlexboxGrid, Col } from "rsuite";
+import { GlobalContext } from "../../../Contexts/GlobalContext";
 
 import "./SomeGuy.css";
 
 const SomeGuy = () => {
+  const { isMobile } = useContext(GlobalContext);
+
   return (
     <div className="some-guy">
       <FlexboxGrid justify="space-around">
         <FlexboxGrid.Item
-          className="some-guy-text"
+          order={isMobile ? 2 : 1}
+          className="some-guy-text-container"
           as={Col}
           colspan={24}
           md={12}
         >
-          <div style={{ paddingRight: "5rem" }}>
+          <div className="some-guy-text">
             <h2 style={{ marginBottom: "2rem" }}>
               BRINGING YOU THE <span style={{ color: "#D87D4A" }}>BEST</span>{" "}
               AUDIO GEAR
@@ -30,6 +35,12 @@ const SomeGuy = () => {
           </div>
         </FlexboxGrid.Item>
         <FlexboxGrid.Item
+          order={isMobile ? 1 : 2}
+          style={{
+            backgroundImage: isMobile
+              ? "url('/assets/shared/mobile/image-best-gear.jpg')"
+              : "url('/assets/shared/desktop/image-best-gear.jpg')",
+          }}
           className="some-guy-img"
           as={Col}
           colspan={24}

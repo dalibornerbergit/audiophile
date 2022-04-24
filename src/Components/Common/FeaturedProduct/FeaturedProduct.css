@@ -8,11 +8,21 @@
 }
 
 .featured-product-img img {
-  height: 350px;
-  width: 300;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .featured-product-text {
   padding: 5rem;
+}
+
+.featured-product-text {
   margin: auto 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .featured-product-text {
+    padding: 2rem 0;
+    text-align: center;
+  }
 }

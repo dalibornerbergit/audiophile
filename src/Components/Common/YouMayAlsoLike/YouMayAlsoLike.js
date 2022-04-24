@@ -17,7 +17,7 @@ const YouMayAlsoLike = () => {
 
       <FlexboxGrid className="ns-ymal" justify="space-between">
         {data.slice(0, 3).map((item, i) => (
-          <FlexboxGrid.Item key={i} as={Col} colspan={24} md={8}>
+          <FlexboxGrid.Item key={i} as={Col} colspan={24} sm={8}>
             <div className="ns-ymal-item">
               <img
                 src={`/assets/product-${item.slug}/desktop/image-product.jpg`}
@@ -30,7 +30,10 @@ const YouMayAlsoLike = () => {
                 {item.name.toUpperCase()}
               </h4>
 
-              <Button onClick={() => history.push(`/speakers/4`)}>
+              <Button
+                style={{ marginBottom: "1rem" }}
+                onClick={() => history.push(`/speakers/4`)}
+              >
                 SEE PRODUCT
               </Button>
             </div>

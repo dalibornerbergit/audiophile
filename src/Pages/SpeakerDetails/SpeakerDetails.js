@@ -10,9 +10,6 @@ import YouMayAlsoLike from "../../Components/Common/YouMayAlsoLike/YouMayAlsoLik
 import ImageMosaic from "../../Components/Common/ImageMosaic/ImageMosaic";
 import ProductDetails from "../../Components/Common/ProductDetails/ProductDetails";
 
-import ZX9Speaker from "../../Assets/Speakers/image-zx9-speaker.jpg";
-import ZX7Speaker from "../../Assets/Speakers/image-zx7-speaker.jpg";
-
 import data from "../../data.json";
 
 import "./SpeakerDetails.css";
@@ -34,11 +31,9 @@ const SpeakerDetails = () => {
 
   const history = useHistory();
 
-  const speakerImg = params.id === "5" ? ZX9Speaker : ZX7Speaker;
+  // const speakerImg = params.id === "5" ? ZX9Speaker : ZX7Speaker;
 
   const handleAddItem = () => {
-    console.log(Array.from(Array(value).keys()));
-
     let iterations = Array.from(Array(value).keys());
     let items = [];
 
@@ -46,12 +41,8 @@ const SpeakerDetails = () => {
       return (items = [...items, data[params.id]]);
     });
 
-    console.log(iterations);
-
     setSelectedItems([...selectedItems, ...items]);
   };
-
-  console.log(data[params.id]);
 
   return (
     <>
@@ -59,7 +50,7 @@ const SpeakerDetails = () => {
         <Header />
       </div>
 
-      <div className="speakers-page-content">
+      <div className="container">
         <p
           style={{ cursor: "pointer", marginBottom: "2rem" }}
           onClick={() => history.goBack()}
@@ -75,42 +66,51 @@ const SpeakerDetails = () => {
             colspan={24}
             md={12}
           >
-            <img src={speakerImg} alt="X" />
+            <img
+              src={`/assets/product-${
+                data[params.id].slug
+              }/desktop/image-product.jpg`}
+              alt="X"
+            />
           </FlexboxGrid.Item>
 
           <FlexboxGrid.Item
-            className="speaker-details-item-text"
+            className="speaker-details-item-text-container"
             as={Col}
             colspan={24}
             md={12}
           >
-            <p style={{ color: "#D87D4A" }}>NEW PRODUCT</p>
+            <div className="speaker-details-item-text">
+              <h2 style={{ color: "#000", marginBottom: "1rem" }}>
+                {data[params.id].name}
+              </h2>
 
-            <h2 style={{ color: "#000", marginBottom: "1rem" }}>
-              {data[params.id].name}
-            </h2>
+              <p style={{ marginBottom: "1rem" }}>
+                {data[params.id].description}
+              </p>
 
-            <p style={{ marginBottom: "1rem" }}>
-              {data[params.id].description}
-            </p>
+              <h5 style={{ marginBottom: "1rem" }}>
+                $ {data[params.id].price}
+              </h5>
 
-            <h5 style={{ marginBottom: "1rem" }}>$ {data[params.id].price}</h5>
+              <div style={{ display: "flex" }}>
+                <InputGroup style={{ width: "100px", marginRight: "1rem" }}>
+                  {value > 0 && (
+                    <InputGroup.Button onClick={handleMinus}>
+                      -
+                    </InputGroup.Button>
+                  )}
+                  <InputNumber
+                    min={0}
+                    className={"custom-input-number"}
+                    value={value}
+                    onChange={setValue}
+                  />
+                  <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
+                </InputGroup>
 
-            <div style={{ display: "flex" }}>
-              <InputGroup style={{ width: "100px", marginRight: "1rem" }}>
-                {value > 0 && (
-                  <InputGroup.Button onClick={handleMinus}>-</InputGroup.Button>
-                )}
-                <InputNumber
-                  min={0}
-                  className={"custom-input-number"}
-                  value={value}
-                  onChange={setValue}
-                />
-                <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
-              </InputGroup>
-
-              <Button onClick={handleAddItem}>ADD TO CART</Button>
+                <Button onClick={handleAddItem}>ADD TO CART</Button>
+              </div>
             </div>
           </FlexboxGrid.Item>
         </FlexboxGrid>

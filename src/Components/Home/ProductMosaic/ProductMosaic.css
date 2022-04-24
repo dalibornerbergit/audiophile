@@ -11,8 +11,8 @@
 #zx9 img {
   max-width: 500px;
   max-height: 410px;
-  padding-top: 5rem;
-  padding-left: 5rem;
+  background-position: center;
+  padding: 2rem;
 }
 
 #zx9 .speaker-info {
@@ -21,31 +21,23 @@
 }
 
 #zx7 {
-  background-image: url("./image-speaker-zx7.jpg");
   background-size: cover;
-}
-
-#zx7 img {
-  max-width: 500px;
-  max-height: 410px;
-  padding-top: 5rem;
-  padding-left: 5rem;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #zx7 .speaker-info {
   padding: 5rem;
-  margin: auto 0;
 }
 
 #yx1 {
   background: #f1f1f1;
-  padding: 5rem 3rem;
-  margin: auto 0;
+  padding: 5rem;
   height: 320px;
 }
 
 #yx1-img {
-  background-image: url("./image-earphones-yx1.jpg");
   background-size: cover;
+  background-position: center;
   height: 320px;
 }

@@ -23,6 +23,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
 .footer-nav-left {
   font-size: 20px;
   font-weight: 800;
@@ -55,4 +56,22 @@ footer {
 .footer-icon {
   margin-left: 0.5rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-nav {
+    display: inline;
+  }
+
+  .footer-nav-left {
+    text-align: center;
+  }
+
+  .footer-content {
+    padding: 2rem;
+  }
+
+  .footer-nav-right {
+    display: inline-grid;
+  }
 }

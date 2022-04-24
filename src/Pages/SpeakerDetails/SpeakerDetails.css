@@ -20,12 +20,22 @@
   max-height: 100%;
 }
 
-.speaker-details-item-text {
+.speaker-details-item-text-container {
   margin: auto 0;
+}
+
+.speaker-details-item-text {
+  padding: 2rem;
 }
 
 .rs-input-group:not(.rs-input-group-inside)
   .rs-input-number:not(:last-child)
   .rs-input-number-btn-group-vertical {
   display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .speaker-details-item-text {
+    padding: 0;
+  }
 }

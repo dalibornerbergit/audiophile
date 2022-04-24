@@ -1,3 +1,13 @@
 .ns-product-details {
   margin-bottom: 5rem;
 }
+
+.in-the-box {
+  padding-left: 6rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .in-the-box {
+    padding-left: 0;
+  }
+}

@@ -12,6 +12,17 @@
   max-height: 100%;
 }
 
-.new-product-text {
+.new-product-text-container {
   margin: auto 0;
+}
+
+.new-product-text {
+  padding: 5rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .new-product-text {
+    padding: 2rem 0;
+    text-align: center;
+  }
 }

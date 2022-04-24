@@ -1,3 +1,7 @@
+// import { useContext } from "react";
+// import { GlobalContext } from "../../../Contexts/GlobalContext";
+import { Nav } from "rsuite";
+import { useHistory } from "react-router-dom";
 import FacebookIcon from "./FacebookIcon";
 import InstagramIcon from "./InstagramIcon";
 import TwitterIcon from "./TwitterIcon";
@@ -5,6 +9,10 @@ import TwitterIcon from "./TwitterIcon";
 import "./Footer.css";
 
 const Footer = () => {
+  // const { isMobile } = useContext(GlobalContext);
+
+  const history = useHistory();
+
   return (
     <footer className="ns-footer">
       <div id="orange-rectangle"></div>
@@ -13,12 +21,18 @@ const Footer = () => {
         <div className="footer-nav">
           <div className="footer-nav-left">audiophile</div>
 
-          <div className="footer-nav-right">
-            <div className="footer-nav-item">HOME</div>
-            <div className="footer-nav-item">HEADPHONES</div>
-            <div className="footer-nav-item">SPEAKERS</div>
-            <div className="footer-nav-item">EARPHONES</div>
-          </div>
+          <Nav className="footer-nav-right">
+            <Nav.Item onClick={() => history.push("/")}>HOME</Nav.Item>
+            <Nav.Item onClick={() => history.push("/speakers")}>
+              HEADPHONES
+            </Nav.Item>
+            <Nav.Item onClick={() => history.push("/speakers")}>
+              SPEAKERS
+            </Nav.Item>
+            <Nav.Item onClick={() => history.push("/earphones")}>
+              EARPHONES
+            </Nav.Item>
+          </Nav>
         </div>
 
         <div className="footer-nav-text">

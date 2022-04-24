@@ -1,0 +1,16 @@
+.checkout-form {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-form input {
+  display: block;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #777;
+}
+
+.checkout-form .err-div {
+  color: red;
+  margin: 0.5rem 0;
+}
