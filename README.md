@@ -4,8 +4,11 @@
 
 # Start project locally
 
-npm i
-npm run dev
+<ol>
+  <li>git clone https://github.com/dalibornerbergit/audiophile</li>
+  <li>npm i</li>
+  <li>npm run dev</li>
+</ol>
 
 # Getting Started with Create React App
 
