@@ -10,7 +10,7 @@ const Menu = () => {
   const categories = [
     {
       name: "HEADPHONES",
-      link: "/speakers",
+      link: "/headphones",
       img: "/assets/shared/desktop/image-category-thumbnail-headphones.png",
     },
     {
