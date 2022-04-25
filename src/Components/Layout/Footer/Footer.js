@@ -30,7 +30,7 @@ const Footer = () => {
           <FlexboxGrid.Item as={Col} colspan={24} md={12}>
             <Nav className="footer-item footer-nav-right">
               <Nav.Item onClick={() => history.push("/")}>HOME</Nav.Item>
-              <Nav.Item onClick={() => history.push("/speakers")}>
+              <Nav.Item onClick={() => history.push("/headphones")}>
                 HEADPHONES
               </Nav.Item>
               <Nav.Item onClick={() => history.push("/speakers")}>
