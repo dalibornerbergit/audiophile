@@ -1,3 +1,12 @@
+# Deployed at
+
+[https://clever-genie-520b11.netlify.app/](https://clever-genie-520b11.netlify.app/)
+
+# Start project locally
+
+npm i
+npm run dev
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
