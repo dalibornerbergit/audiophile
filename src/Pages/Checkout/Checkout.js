@@ -10,7 +10,7 @@ import "./Checkout.css";
 const Checkout = () => {
   const { selectedItems, setSelectedItems } = useContext(CartContext);
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [data, setData] = useState(false);
 
   const {
