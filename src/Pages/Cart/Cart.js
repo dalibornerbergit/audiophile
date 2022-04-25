@@ -65,7 +65,8 @@ const Cart = () => {
 
         {selectedItems.length > 0 && (
           <div style={{ marginBottom: "2rem" }}>
-            <h4>Total: {price > 0 && price + 50}</h4>
+            <h5>Total price: {price > 0 && price / 1.2} $</h5>
+            <h4>Total price: {price > 0 && price + 50} $</h4>
             <p>VAT: 20% + shipping: 50$</p>
           </div>
         )}

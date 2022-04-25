@@ -2,8 +2,11 @@ import Header from "../../Layout/Header/Header";
 import { Button } from "rsuite";
 
 import "./HomeHeader.css";
+import { useHistory } from "react-router-dom";
 
 const HomeHeader = () => {
+  const history = useHistory();
+
   return (
     <div
       className="headphones-div"
@@ -24,7 +27,9 @@ const HomeHeader = () => {
             made for the passionate music enthusiast.
           </p>
 
-          <Button>SEE PRODUCT</Button>
+          <Button onClick={() => history.push("/headphones/3")}>
+            SEE PRODUCT
+          </Button>
         </div>
       </div>
     </div>

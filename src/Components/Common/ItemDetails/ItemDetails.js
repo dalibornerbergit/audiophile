@@ -63,7 +63,9 @@ const ItemDetails = ({ data, params }) => {
           <div style={{ display: "flex" }}>
             <InputGroup style={{ width: "100px", marginRight: "1rem" }}>
               {value > 0 && (
-                <InputGroup.Button onClick={handleMinus}>-</InputGroup.Button>
+                <InputGroup.Button className="amount-btn" onClick={handleMinus}>
+                  -
+                </InputGroup.Button>
               )}
               <InputNumber
                 min={0}
@@ -71,7 +73,9 @@ const ItemDetails = ({ data, params }) => {
                 value={value}
                 onChange={setValue}
               />
-              <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
+              <InputGroup.Button className="amount-btn" onClick={handlePlus}>
+                +
+              </InputGroup.Button>
             </InputGroup>
 
             <Button onClick={handleAddItem}>ADD TO CART</Button>

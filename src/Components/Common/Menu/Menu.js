@@ -35,11 +35,14 @@ const Menu = () => {
               onClick={() => history.push(category.link)}
             >
               <img src={category.img} alt="X" />
-              <p>{category.name}</p>
 
-              <p>
-                SHOP <ArrowRightIcon />
-              </p>
+              <div className="ns-menu-item-text">
+                <p>{category.name}</p>
+
+                <p>
+                  SHOP <ArrowRightIcon />
+                </p>
+              </div>
             </div>
           </FlexboxGrid.Item>
         ))}

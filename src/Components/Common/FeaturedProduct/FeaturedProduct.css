@@ -12,12 +12,12 @@
   max-height: 100%;
 }
 
-.featured-product-text {
-  padding: 5rem;
+.featured-product-text-container {
+  margin: auto 0;
 }
 
 .featured-product-text {
-  margin: auto 0;
+  padding: 5rem;
 }
 
 @media only screen and (max-width: 750px) {
