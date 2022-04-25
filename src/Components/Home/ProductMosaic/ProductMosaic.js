@@ -102,7 +102,7 @@ const ProductMosaic = () => {
       >
         <h3 style={{ marginBottom: "2rem" }}>YX1 EARPHONES</h3>
 
-        <Button appearance="ghost" onClick={() => history.push("/speakers/4")}>
+        <Button appearance="ghost" onClick={() => history.push("/earphones/0")}>
           SEE PRODUCT
         </Button>
       </FlexboxGrid.Item>
