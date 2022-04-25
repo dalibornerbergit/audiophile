@@ -12,6 +12,7 @@
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
+  min-height: 180px;
 }
 
 .ns-menu-item img {
